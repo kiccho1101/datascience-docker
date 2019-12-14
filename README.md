@@ -6,21 +6,27 @@
 
 ## How to build
 
-```sh
-docker-compose build
+```bash
+sh build.sh
+```
+
+## How to push
+
+```bash
+docker-compose push
 ```
 
 ## How to use
 
 Pull the docker image from [DockerHub](https://hub.docker.com/repository/docker/youodf/kaggle-python)
 
-```sh
+```bash
 docker pull youodf/kaggle-python
 ```
 
 ## Run the docker image with command
 
-```sh
+```bash
 docker run youodf/kaggle-python COMMAND
 ```
 
@@ -28,12 +34,12 @@ docker run youodf/kaggle-python COMMAND
 
 JupyterLab
 
-```sh
+```bash
 docker run youodf/kaggle-python jupyter lab --ip='0.0.0.0' --allow-root
 ```
 
 Python scripts
 
-```sh
+```bash
 docker run youodf/kaggle-python python xxx.py
 ```

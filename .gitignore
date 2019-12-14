@@ -1,2 +1,12 @@
 .vscode
 .ipynb_checkpoints
+
+bert
+
+jumanpp-2.0.0-rc2.tar.xz
+jumanpp-2.0.0-rc2
+
+.DS_Store
+
+postgres/data
+pgadmin
