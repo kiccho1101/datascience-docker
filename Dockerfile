@@ -5,6 +5,7 @@ ADD ./jumanpp-2.0.0-rc2 /app/jumanpp-2.0.0-rc2
 ADD ./notebook /app/notebook
 ADD ./src /app/src
 ADD ./requirements.txt /app
+ADD ./example /app/example
 
 ### ============================ Install Juman++ ============================
 WORKDIR /app/jumanpp-2.0.0-rc2/build
