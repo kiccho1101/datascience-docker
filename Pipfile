@@ -36,6 +36,8 @@ category-encoders = "*"
 japanize-matplotlib = "*"
 beautifulsoup4 = "*"
 requests = "*"
+pytorch-pretrained-bert = "*"
+pyknp = "*"
 
 [pipenv]
 allow_prereleases = true
