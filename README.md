@@ -63,6 +63,12 @@ docker pull youodf/datascience
 docker run youodf/datascience COMMAND
 ```
 
+## Create local environment for python linting
+
+```bash
+pipenv install
+```
+
 ### Example
 
 JupyterLab
