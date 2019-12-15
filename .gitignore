@@ -1,6 +1,8 @@
 .vscode
 .ipynb_checkpoints
 
+__pycache__
+
 bert/Japanese_L-12_H-768_A-12_E-30_BPE_WWM_transformers
 bert/Japanese_L-12_H-768_A-12_E-30_BPE_WWM_transformers.zip
 

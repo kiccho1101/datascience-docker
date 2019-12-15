@@ -16,6 +16,4 @@ if [ ! -d "$JUMAN_DIR" ]; then
     tar Jxfv jumanpp-2.0.0-rc2.tar.xz
 fi
 
-# Then build
 docker-compose build
-docker-compose push
