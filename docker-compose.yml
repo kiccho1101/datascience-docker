@@ -4,8 +4,9 @@ services:
     build: .
     image: youodf/datascience
     ports:
-      - "8888:8888"
+      - "8890:8888"
     volumes:
      - ./notebook:/app/notebook
      - ./src:/app/src
+     - ./example:/app/example
     command: jupyter notebook --ip='0.0.0.0' --allow-root --no-browser
