@@ -36,3 +36,6 @@ tox
 sentence-transformers
 jsonlines
 python-dotenv
+mlflow[extras]
+flaky
+responses

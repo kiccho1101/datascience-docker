@@ -12,6 +12,14 @@ WORKDIR /app
 RUN pip install -U pip setuptools transformers
 RUN pip install -r /app/requirements.txt
 
+# Uninstall pyyaml (https://github.com/pypa/pip/issues/5247)
+RUN pip install --upgrade --force-reinstall pip==9.0.3
+RUN pip uninstall -y pyyaml
+RUN pip install -U pip
+
+# Install packages for TFX
+RUN pip install tfx==0.15.0 tensorflow==2.0 tensorboard==2.0.0 grpcio==1.24.3 pyarrow==0.14.1
+
 # Install Jupyter Notebook Extensions
 RUN jupyter contrib nbextension install --user \
     && jupyter nbextensions_configurator enable --user
@@ -45,7 +53,6 @@ RUN mkdir -p $(jupyter --data-dir)/nbextensions \
 RUN jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8 -cellw 99% \
     && sed -i '1s/^/.edit_mode .cell.selected .CodeMirror-focused:not(.cm-fat-cursor) { background-color: #1a0000 !important; }\n /' /root/.jupyter/custom/custom.css \
     && sed -i '1s/^/.edit_mode .cell.selected .CodeMirror-focused.cm-fat-cursor { background-color: #1a0000 !important; }\n /' /root/.jupyter/custom/custom.css
-
 
 ENV NB_PREFIX /
 
