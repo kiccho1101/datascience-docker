@@ -20,6 +20,9 @@ RUN pip install -U pip
 # Install packages for TFX
 RUN pip install tfx==0.15.0 tensorflow==2.0 tensorboard==2.0.0 grpcio==1.24.3 pyarrow==0.14.1
 
+# To prevent autoreload delay
+RUN pip install --user ipython==7.5
+
 # Install Jupyter Notebook Extensions
 RUN jupyter contrib nbextension install --user \
     && jupyter nbextensions_configurator enable --user
